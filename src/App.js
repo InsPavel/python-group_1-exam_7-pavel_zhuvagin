@@ -14,16 +14,18 @@ const availableMenu = [
 
 class App extends Component {
 
-    state = {
-        foods: [
-            {name: 'hamburger', count: 0, total: 0},
-            {name: 'chesseburger', count: 0, total: 0},
-            {name: 'burger', count: 0, total: 0},
-            {name: 'coffe', count: 0, total: 0},
-            {name: 'tea', count: 0, total: 0},
-            {name: 'cola', count: 0, total: 0}
-        ]
-    };
+    constructor(props){
+        super(props);
+
+        this.state = {};
+
+        this.state.foods = availableMenu.map(item => {
+            let food = {...item};
+            food.total = 0;
+            food.count = 0;
+            return food
+        });
+    }
 
     changeFood = (name, amount) => {
         let price = availableMenu.find(item => item.name === name).price;

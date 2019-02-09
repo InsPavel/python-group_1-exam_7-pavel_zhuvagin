@@ -1,5 +1,5 @@
 import React from 'react';
-import Food from './Food/Food'
+import Food from './Food/Food';
 
 function Menu(props) {
     return <div className="menu">

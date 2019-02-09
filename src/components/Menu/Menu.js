@@ -4,7 +4,7 @@ import Food from './Food/Food'
 function Menu(props) {
     return <div className="menu">
         <h3>Меню</h3>
-        {props.foods.map((food) => {
+        {props.menu.map((food) => {
                 return <Food
                 key={food.name}
                 name={food.label}

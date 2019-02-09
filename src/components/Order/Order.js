@@ -10,6 +10,7 @@ function Order(props) {
                 name={props.menu[i].label}
                 count={props.foods[i].count}
                 total={props.foods[i].total}
+                removeFood={() => props.onChangeFood(props.foods[i].name, -1)}
             />)
         }
     }

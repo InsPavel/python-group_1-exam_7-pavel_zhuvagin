@@ -9,7 +9,7 @@ function Menu(props) {
                 key={food.name}
                 name={food.label}
                 price={food.price}
-                onAddFood={() => props.onAddFood(food.name)}
+                addFood={() => props.onChangeFood(food.name, +1)}
                 />
             })
         }

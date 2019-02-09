@@ -2,9 +2,9 @@ import React from 'react';
 
 function Food(props) {
     return <div className="Food">
-                <button type='button' onClick={props.onAddFood} >
+                <button type='button' onClick={props.addFood} >
                     <p>{props.name}</p>
-                    <p>Цена: {props.price}</p>
+                    <p>Цена: {props.price}KGS</p>
                 </button>
     </div>
 }

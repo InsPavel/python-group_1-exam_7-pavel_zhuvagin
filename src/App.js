@@ -25,14 +25,14 @@ class App extends Component {
         ]
     };
 
-    changeFood = (name) => {
+    changeFood = (name, amount) => {
         let price = availableMenu.find(item => item.name === name).price;
 
         let index = this.state.foods.findIndex(item => item.name === name);
 
         let food = {...this.state.foods[index]};
 
-        food.count += 1;
+        food.count += amount;
         food.total = food.count * price;
 
         let foods = [...this.state.foods];
@@ -49,10 +49,11 @@ class App extends Component {
                 <Order
                     foods={this.state.foods}
                     menu={availableMenu}
+                    onChangeFood={this.changeFood}
                 />
                 <Menu
                     menu={availableMenu}
-                    onAddFood={this.changeFood}
+                    onChangeFood={this.changeFood}
                 />
             </div>
         );

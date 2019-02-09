@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+const availableMenu = [
+    {name: 'Hamburger', price: '80', total: 0},
+    {name: 'Chesseburger', price: '90', total: 0},
+    {name: 'Burger', price: '80', total: 0},
+    {name: 'Coffe', price: '80', total: 0},
+    {name: 'Tea', price: '80', total: 0},
+    {name: 'Cola', price: '80', total: 0}
+];
+
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+    state = {
+        food: [
+            {name: 'hamburger', total: 0},
+            {name: 'chesseburger', total: 0},
+            {name: 'burger', total: 0},
+            {name: 'coffe', total: 0},
+            {name: 'tea', total: 0},
+            {name: 'cola', total: 0}
+        ]
+    };
+
+    render() {
+        return (
+            <div className="container">
+
+            </div>
+        );
+    }
 }
 
 export default App;

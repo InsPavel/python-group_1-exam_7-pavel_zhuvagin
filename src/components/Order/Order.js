@@ -1,5 +1,6 @@
 import React from 'react';
 import OrderFood from './OrderFood/OrderFood'
+import Total from "./Total/Total";
 
 function Order(props) {
     let foods = [];
@@ -7,6 +8,7 @@ function Order(props) {
     for (let i = 0; i < props.foods.length; i++) {
         if(props.foods[i].count > 0){
             foods.push(<OrderFood
+                key={props.foods[i].name}
                 name={props.menu[i].label}
                 count={props.foods[i].count}
                 total={props.foods[i].total}
@@ -17,6 +19,7 @@ function Order(props) {
     return <div className="order">
         <h3>Заказ</h3>
         {foods}
+        <Total getTotal={props.getTotal}/>
     </div>
 }
 

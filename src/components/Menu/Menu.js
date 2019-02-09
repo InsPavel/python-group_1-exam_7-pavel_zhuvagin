@@ -6,10 +6,10 @@ function Menu(props) {
         <h3>Меню</h3>
         {props.menu.map((food) => {
                 return <Food
-                key={food.name}
-                name={food.label}
-                price={food.price}
-                addFood={() => props.changeFood(food.name, +1)}
+                    key={food.name}
+                    name={food.label}
+                    price={food.price}
+                    addFood={() => props.changeFood(food.name, +1)}
                 />
             })
         }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './OrderFood.css'
+import './OrderFood.css';
 
 function OrderFood(props) {
     return <div className="orderfood">

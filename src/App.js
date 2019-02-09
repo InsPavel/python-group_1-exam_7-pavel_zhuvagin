@@ -47,9 +47,12 @@ class App extends Component {
         let total = 0;
         for(let i = 0; i < this.state.foods.length; i++){
             total += this.state.foods[i].total;
+            if(total === 0){
+                return 'Заказ пустой!'
+            }
         }
 
-        return total;
+        return 'Общая сумма: ' + total;
     };
 
     render() {
@@ -59,6 +62,7 @@ class App extends Component {
                     foods={this.state.foods}
                     menu={availableMenu}
                     changeFood={this.changeFood}
+                    getTotal={this.getTotal}
                 />
                 <Menu
                     menu={availableMenu}

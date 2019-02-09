@@ -1,32 +1,35 @@
 import React, { Component } from 'react';
 import './App.css';
+import Menu from './components/Menu/Menu'
 
 const availableMenu = [
-    {name: 'Hamburger', price: '80', total: 0},
-    {name: 'Chesseburger', price: '90', total: 0},
-    {name: 'Burger', price: '80', total: 0},
-    {name: 'Coffe', price: '80', total: 0},
-    {name: 'Tea', price: '80', total: 0},
-    {name: 'Cola', price: '80', total: 0}
+    {name: 'Hamburger', label: 'Гамбургер', price: '80'},
+    {name: 'Chesseburger', label: 'Чизбургер', price: '90'},
+    {name: 'Burger', label: 'Бургер', price: '80'},
+    {name: 'Coffe', label: 'Кофе', price: '80'},
+    {name: 'Tea', label: 'Чай', price: '80'},
+    {name: 'Cola', label: 'Кола', price: '80'}
 ];
 
 class App extends Component {
 
     state = {
         food: [
-            {name: 'hamburger', total: 0},
-            {name: 'chesseburger', total: 0},
-            {name: 'burger', total: 0},
-            {name: 'coffe', total: 0},
-            {name: 'tea', total: 0},
-            {name: 'cola', total: 0}
+            {name: 'hamburger', count: 0, total: 0},
+            {name: 'chesseburger', count: 0, total: 0},
+            {name: 'burger', count: 0, total: 0},
+            {name: 'coffe', count: 0, total: 0},
+            {name: 'tea', count: 0, total: 0},
+            {name: 'cola', count: 0, total: 0}
         ]
     };
 
     render() {
         return (
             <div className="container">
-
+                    <Menu
+                        foods={availableMenu}
+                    />
             </div>
         );
     }

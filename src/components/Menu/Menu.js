@@ -4,6 +4,7 @@ import Food from './Food/Food';
 function Menu(props) {
     return <div className="menu">
         <h3>Меню</h3>
+        <div className="menuborder">
         {props.menu.map((food) => {
                 return <Food
                     key={food.name}
@@ -13,6 +14,7 @@ function Menu(props) {
                 />
             })
         }
+        </div>
     </div>
 }
 

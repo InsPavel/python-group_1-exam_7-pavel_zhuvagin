@@ -18,8 +18,10 @@ function Order(props) {
     }
     return <div className="order">
         <h3>Заказ</h3>
-        {foods}
-        <Total getTotal={props.getTotal}/>
+        <div className="orderborder">
+            {foods}
+            <Total getTotal={props.getTotal}/>
+        </div>
     </div>
 }
 

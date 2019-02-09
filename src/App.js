@@ -49,11 +49,10 @@ class App extends Component {
         let total = 0;
         for(let i = 0; i < this.state.foods.length; i++){
             total += this.state.foods[i].total;
-            if(total === 0){
-                return 'Заказ пустой!'
-            }
         }
-
+        if(total === 0){
+            return 'Заказ пустой!'
+        }
         return 'Общая сумма: ' + total;
     };
 

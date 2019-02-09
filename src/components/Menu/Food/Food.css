@@ -1,5 +1,5 @@
 .addfood {
-    width: 70%;
+    width: 80%;
     margin-bottom: 3%;
     text-align: left;
     font-size: 15px;
@@ -10,6 +10,7 @@
 
 .food{
     width: 50%;
+    text-align: center;
     display: inline-block;
 }
 

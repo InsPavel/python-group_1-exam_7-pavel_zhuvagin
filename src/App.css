@@ -11,7 +11,10 @@
     width: 30%;
 }
 
-
+.menu {
+    display: inline-block;
+    width: 60%;
+}
 
 
 

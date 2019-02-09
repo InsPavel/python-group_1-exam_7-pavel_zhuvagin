@@ -10,6 +10,7 @@ function Order(props) {
             foods.push(<OrderFood
                 key={props.foods[i].name}
                 name={props.menu[i].label}
+                price={props.menu[i].price}
                 count={props.foods[i].count}
                 total={props.foods[i].total}
                 onRemoveFood={() => props.changeFood(props.foods[i].name, -1)}

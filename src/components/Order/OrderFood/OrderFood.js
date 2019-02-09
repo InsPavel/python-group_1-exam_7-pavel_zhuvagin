@@ -6,7 +6,7 @@ function OrderFood(props) {
         <p className="namefood">{props.name}</p>
         <div className="orderall">
             <p>x{props.count}</p>
-            <p>{props.total}KGS</p>
+            <p>{props.price}KGS</p>
             <button className="removefood" type='button' onClick={props.onRemoveFood} ><i className="fas fa-times"/></button>
         </div>
     </div>

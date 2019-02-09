@@ -6,10 +6,10 @@ import Order from "./components/Order/Order";
 const availableMenu = [
     {name: 'hamburger', label: 'Гамбургер', price: '80'},
     {name: 'chesseburger', label: 'Чизбургер', price: '90'},
-    {name: 'burger', label: 'Бургер', price: '80'},
-    {name: 'coffe', label: 'Кофе', price: '80'},
-    {name: 'tea', label: 'Чай', price: '80'},
-    {name: 'cola', label: 'Кола', price: '80'}
+    {name: 'burger', label: 'Бургер', price: '60'},
+    {name: 'coffe', label: 'Кофе', price: '45'},
+    {name: 'tea', label: 'Чай', price: '40'},
+    {name: 'cola', label: 'Кола', price: '28'}
 ];
 
 class App extends Component {
@@ -60,7 +60,6 @@ class App extends Component {
                     menu={availableMenu}
                     changeFood={this.changeFood}
                 />
-                <h3>Общая сумма: {this.getTotal()}</h3>
                 <Menu
                     menu={availableMenu}
                     changeFood={this.changeFood}

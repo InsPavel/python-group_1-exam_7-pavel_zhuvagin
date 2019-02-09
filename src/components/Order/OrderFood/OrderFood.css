@@ -1,0 +1,33 @@
+.orderfood {
+    width: 70%;
+}
+
+
+.orderfood p{
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    font-size: 17px;
+}
+
+.orderfood .namefood{
+    font-size: 15px;
+    float: left;
+}
+
+.orderfood .orderall {
+    text-align: right;
+}
+
+.orderfood .removefood {
+    border: 0;
+    background: 0;
+}
+
+.removefood .fa-times {
+    font-size: 18px;
+}
+
+.fa-times:hover {
+    color: red;
+}

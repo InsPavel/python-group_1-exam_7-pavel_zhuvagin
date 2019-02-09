@@ -6,7 +6,11 @@ function Order(props) {
 
     for (let i = 0; i < props.foods.length; i++) {
         if(props.foods[i].count > 0){
-            foods.push(<OrderFood name={props.menu[i].label} count={props.foods[i].count} />)
+            foods.push(<OrderFood
+                name={props.menu[i].label}
+                count={props.foods[i].count}
+                total={props.foods[i].total}
+            />)
         }
     }
     return <div className="order">

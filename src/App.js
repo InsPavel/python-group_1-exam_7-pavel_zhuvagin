@@ -4,12 +4,12 @@ import Menu from './components/Menu/Menu'
 import Order from "./components/Order/Order";
 
 const availableMenu = [
-    {name: 'Hamburger', label: 'Гамбургер', price: '80'},
-    {name: 'Chesseburger', label: 'Чизбургер', price: '90'},
-    {name: 'Burger', label: 'Бургер', price: '80'},
-    {name: 'Coffe', label: 'Кофе', price: '80'},
-    {name: 'Tea', label: 'Чай', price: '80'},
-    {name: 'Cola', label: 'Кола', price: '80'}
+    {name: 'hamburger', label: 'Гамбургер', price: '80'},
+    {name: 'chesseburger', label: 'Чизбургер', price: '90'},
+    {name: 'burger', label: 'Бургер', price: '80'},
+    {name: 'coffe', label: 'Кофе', price: '80'},
+    {name: 'tea', label: 'Чай', price: '80'},
+    {name: 'cola', label: 'Кола', price: '80'}
 ];
 
 class App extends Component {
@@ -27,8 +27,20 @@ class App extends Component {
 
     changeFood = (name) => {
         let price = availableMenu.find(item => item.name === name).price;
-        let food = this.state.foods.find(item => item.name === name);
 
+        let index = this.state.foods.findIndex(item => item.name === name);
+
+        let food = {...this.state.foods[index]};
+
+        food.count += 1;
+        food.total = food.count * price;
+
+        let foods = [...this.state.foods];
+        foods[index] = food;
+
+        let state = {...this.state, foods};
+
+        this.setState(state)
     };
 
     render() {
@@ -40,6 +52,7 @@ class App extends Component {
                 />
                 <Menu
                     menu={availableMenu}
+                    onAddFood={this.changeFood}
                 />
             </div>
         );

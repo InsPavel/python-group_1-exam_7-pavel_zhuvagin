@@ -43,17 +43,27 @@ class App extends Component {
         this.setState(state)
     };
 
+    getTotal = () => {
+        let total = 0;
+        for(let i = 0; i < this.state.foods.length; i++){
+            total += this.state.foods[i].total;
+        }
+
+        return total;
+    };
+
     render() {
         return (
             <div className="container">
                 <Order
                     foods={this.state.foods}
                     menu={availableMenu}
-                    onChangeFood={this.changeFood}
+                    changeFood={this.changeFood}
                 />
+                <h3>Общая сумма: {this.getTotal()}</h3>
                 <Menu
                     menu={availableMenu}
-                    onChangeFood={this.changeFood}
+                    changeFood={this.changeFood}
                 />
             </div>
         );
